@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Vue," />
+  <meta name="keywords" content="EasyUI," />
 
 
 
@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="说明：Vue单文件组件的模板，包含template/script/style的基本结构。配合Eslint，缩进为2个空格，加入scss。  1234567891011121314151617&amp;lt;template&amp;gt;  &amp;lt;div&amp;gt;hello &amp;#123;&amp;#123;x&amp;#125;&amp;#125;&amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;&amp;lt;script&amp;gt;e">
-<meta name="keywords" content="Vue">
+<meta name="description" content="问题描述以DateBox为例，当属性值的格式日期分隔符为-，如yyyy-MM-dd，而DateBox的默认格式为yyyy/MM/dd时，会导致DateBox无法赋值，此时将显示为当前时间，而不是对应的属性值。 解决办法引入&amp;#39;easyui/locale/easyui-lang-zh_CN.js&amp;#39;，会把日期控件的默认格式改为&amp;#39;yyyy-MM-dd&amp;#39;。">
+<meta name="keywords" content="EasyUI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue单文件组件模板">
-<meta property="og:url" content="http://mistel.cn/2017/07/03/vue-singlefilecomponent-template/index.html">
+<meta property="og:title" content="EasyUI中DateBox、DateTimeBox的格式问题">
+<meta property="og:url" content="http://mistel.cn/2017/07/04/easyui-datetime-format/index.html">
 <meta property="og:site_name" content="Frozone">
-<meta property="og:description" content="说明：Vue单文件组件的模板，包含template/script/style的基本结构。配合Eslint，缩进为2个空格，加入scss。  1234567891011121314151617&amp;lt;template&amp;gt;  &amp;lt;div&amp;gt;hello &amp;#123;&amp;#123;x&amp;#125;&amp;#125;&amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;&amp;lt;script&amp;gt;e">
-<meta property="og:updated_time" content="2017-07-04T06:21:32.103Z">
+<meta property="og:description" content="问题描述以DateBox为例，当属性值的格式日期分隔符为-，如yyyy-MM-dd，而DateBox的默认格式为yyyy/MM/dd时，会导致DateBox无法赋值，此时将显示为当前时间，而不是对应的属性值。 解决办法引入&amp;#39;easyui/locale/easyui-lang-zh_CN.js&amp;#39;，会把日期控件的默认格式改为&amp;#39;yyyy-MM-dd&amp;#39;。">
+<meta property="og:updated_time" content="2017-07-04T06:38:46.494Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue单文件组件模板">
-<meta name="twitter:description" content="说明：Vue单文件组件的模板，包含template/script/style的基本结构。配合Eslint，缩进为2个空格，加入scss。  1234567891011121314151617&amp;lt;template&amp;gt;  &amp;lt;div&amp;gt;hello &amp;#123;&amp;#123;x&amp;#125;&amp;#125;&amp;lt;/div&amp;gt;&amp;lt;/template&amp;gt;&amp;lt;script&amp;gt;e">
+<meta name="twitter:title" content="EasyUI中DateBox、DateTimeBox的格式问题">
+<meta name="twitter:description" content="问题描述以DateBox为例，当属性值的格式日期分隔符为-，如yyyy-MM-dd，而DateBox的默认格式为yyyy/MM/dd时，会导致DateBox无法赋值，此时将显示为当前时间，而不是对应的属性值。 解决办法引入&amp;#39;easyui/locale/easyui-lang-zh_CN.js&amp;#39;，会把日期控件的默认格式改为&amp;#39;yyyy-MM-dd&amp;#39;。">
 
 
 
@@ -131,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://mistel.cn/2017/07/03/vue-singlefilecomponent-template/"/>
+  <link rel="canonical" href="http://mistel.cn/2017/07/04/easyui-datetime-format/"/>
 
 
 
 
 
-  <title>Vue单文件组件模板 | Frozone</title>
+  <title>EasyUI中DateBox、DateTimeBox的格式问题 | Frozone</title>
   
 
 
@@ -266,7 +266,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://mistel.cn/2017/07/03/vue-singlefilecomponent-template/">
+    <link itemprop="mainEntityOfPage" href="http://mistel.cn/2017/07/04/easyui-datetime-format/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kreiven">
@@ -283,7 +283,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Vue单文件组件模板</h1>
+          <h1 class="post-title" itemprop="name headline">EasyUI中DateBox、DateTimeBox的格式问题</h1>
         
 
         <div class="post-meta">
@@ -295,8 +295,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-03T14:53:50+08:00">
-                2017-07-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-04T14:20:18+08:00">
+                2017-07-04
               </time>
             
 
@@ -352,10 +352,9 @@
       
 
       
-        <blockquote>
-<p><strong>说明：</strong>Vue单文件组件的模板，包含template/script/style的基本结构。配合<strong>Eslint</strong>，缩进为2个空格，加入scss。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  &lt;div&gt;hello &#123;&#123;x&#125;&#125;&lt;/div&gt;</div><div class="line">&lt;/template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">export default &#123;</div><div class="line">  data() &#123;</div><div class="line">    return &#123;</div><div class="line">      x: &apos;single file component&apos;</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;style lang=&apos;scss&apos; scoped&gt;</div><div class="line"></div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>以<code>DateBox</code>为例，当属性值的格式日期分隔符为<code>-</code>，如<code>yyyy-MM-dd</code>，而<code>DateBox</code>的默认格式为<code>yyyy/MM/dd</code>时，会导致<code>DateBox</code>无法赋值，此时将显示为当前时间，而不是对应的属性值。</p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>引入<code>&#39;easyui/locale/easyui-lang-zh_CN.js&#39;</code>，会把日期控件的默认格式改为<code>&#39;yyyy-MM-dd&#39;</code>。</p>
+
       
     </div>
 
@@ -384,7 +383,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Vue/" rel="tag"># Vue</a>
+            <a href="/tags/EasyUI/" rel="tag"># EasyUI</a>
           
         </div>
       
@@ -397,8 +396,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/23/first/" rel="next" title="梦想是要有的，万一实现了呢">
-                <i class="fa fa-chevron-left"></i> 梦想是要有的，万一实现了呢
+              <a href="/2017/07/03/vue-singlefilecomponent-template/" rel="next" title="Vue单文件组件模板">
+                <i class="fa fa-chevron-left"></i> Vue单文件组件模板
               </a>
             
           </div>
@@ -406,10 +405,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/04/easyui-datetime-format/" rel="prev" title="EasyUI中DateBox、DateTimeBox的格式问题">
-                EasyUI中DateBox、DateTimeBox的格式问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -456,8 +451,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -519,6 +523,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决办法"><span class="nav-number">2.</span> <span class="nav-text">解决办法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
